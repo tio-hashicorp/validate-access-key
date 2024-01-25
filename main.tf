@@ -10,7 +10,8 @@ provider "aws" {
 
 locals {
   #unused_limit = timeadd(timestamp(), "-720h")
-  unused_limit = "2023-12-25T00:00:00Z"
+  #unused_limit = "2023-12-25T00:00:00Z"
+  unused_limit = timeadd(plantimestamp(), "-720h")
 }
 
 data "aws_iam_access_keys" "example" {
