@@ -1,3 +1,13 @@
+provider "aws" {
+  region = "ap-southeast-1"
+
+  default_tags {
+    tags = {
+      hashicorp-learn = "checks"
+    }
+  }
+}
+
 locals {
   unused_limit = timeadd(timestamp(), "-720h")
 }
